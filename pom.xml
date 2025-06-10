@@ -29,24 +29,29 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>com.rock</groupId>
-            <artifactId>rock-test-b-provider</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.rock</groupId>
-            <artifactId>rock-rpc</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>slf4j-log4j12</artifactId>
-                    <groupId>org.slf4j</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+<!--                <version>3.12.0</version>-->
+<!--                <configuration>-->
+<!--                    <source>11</source>-->
+<!--                    <target>11</target>-->
+<!--                </configuration>-->
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.test.rocka.TestAApplication</mainClass>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
 
 </project>
